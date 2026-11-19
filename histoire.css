@@ -1,0 +1,143 @@
+body
+{
+   background-color:#000000;
+   color:#ffffff;
+   font-family:"Trebuchet MS",Verdana,Geneva,Arial,Helvetica,sans-serif;
+   font-size:small; /* taille écriture ( 0.89em ou 13px )*/
+   margin:0 1%;
+   padding:30px 10px 10px 10px; /*l'espace entre le contenu et la bordure.*/ /*padding plutôt que le margin car un padding empêche la fusion des marges*/
+
+   
+}
+
+#page /* cible id= "page" dans le html */
+{
+   color:#000000; /* text en noir */
+   background-color:transparent; /* voir atraver le #page donc on voit le noir du body */ 
+}
+
+header
+{
+   font-size:300%;
+   height:180px;
+   width:100%;
+   border-radius:10px;
+   background-color:#F5F5DC;
+}
+
+header h1
+{
+   text-align:center;
+   margin-top:0px;
+   position:relative;
+   padding-top: 3%; /* espace du haut du h1 et du titre */ 
+   
+}
+
+header .logo
+{
+   position:absolute; /* logo est positionné en dessous = ne prend plus de place et donc laisse le titre ce positionner au centre */
+   z-index:1; /* fait passer logo par dessus quand la souris passe dessus */
+   margin-top:20px;
+   margin-bottom:20px;
+   margin-left:1%;
+   display:block;
+   
+}
+
+/* Image à gauche, texte à droite */
+nav .histoire
+{
+   display:flex;          /* place l'image et le texte côte à côte */
+   gap:40px;              /* espace de 30px entre l'image et le texte */
+   padding:30px;          /* espace entre ce bloc et les bords du cadre beige */
+   text-align:left;       /* le texte est aligné à gauche (le nav le centrait) */
+}
+
+/* L'image */
+nav .histoire img
+{
+   width:30%;             /* l'image prend 40% de la largeur */
+   height:500px;          /* hauteur de l'image */
+   object-fit:cover;      /* image non déformée */
+   border-radius:25px;    /* coins arrondis */
+}
+
+/* Le texte */
+nav .histoire .texte
+{
+   width:60%;             /* le texte prend les 60% restants */
+}
+
+/* Le titre : aligné avec le haut de l'image */
+nav .histoire h2
+{
+   margin-top:0;          /* supprime l'espace au-dessus : le titre est à la même hauteur que le haut de l'image */
+   font-size:300%;
+}
+
+/* Les paragraphes */
+nav .histoire p
+{
+   font-size:130%;        /* taille du texte */
+   line-height:1.5;       /* espace entre les lignes */
+}
+
+
+
+nav
+{
+   margin-top:30px;                 
+   border-style:solid; /* style de trait bordure */
+   border-width:1px 1px 3px 1px; /* epaisseur de chaque coté */
+   padding:0 0 30px 0; /* 0 espace intérieur gauche */
+   text-align:center;
+   overflow: hidden;
+   border-radius:0px;/*coins pas arrondis*/ 
+   background-color:#F5F5DC;
+   border-radius:10px;
+}
+
+
+
+nav a
+{
+   color:black;
+   text-decoration:none; /* pas d'effets soulignés liens */
+}
+
+nav h3 a
+{
+   display:block;
+   font-size:180%;
+   transition:transform 0.2s ease; /* temps que prend le texte a zoomer */
+}
+
+nav .carte
+{
+   position:relative;   /* le titre se place dans la carte */
+   width:90%;           /* largeur de l'image */
+   margin:10px auto;    /* centre la carte */
+   border-radius:25px;  /* coins arrondis */
+   overflow:hidden;     /* l'image suit l'arrondi */
+}
+
+nav .carte img
+{
+   display:block;
+   width:100%;          /* remplit la carte */
+   height:400px;        /* hauteur de l'image */
+   object-fit:cover;    /* image non déformée */
+}
+
+nav .carte h3
+{
+   position:absolute;   /* posé sur l'image */
+   top:0;
+   left:0;
+   margin:0;
+   padding:8px 12px;
+   color:white;
+   background-color:rgba(0,0,0,0.6);  /* fond sombre pour lire le texte */
+   pointer-events:none; /* le clic passe à travers le titre jusqu'à l'image */
+}
